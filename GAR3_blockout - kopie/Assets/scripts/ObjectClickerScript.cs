@@ -19,8 +19,8 @@ public class ObjectClickerScript : MonoBehaviour {
             
             RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-
-			if (Physics.Raycast (ray, out hit, range, pickupLayerMask)) 
+            print("hitIt");
+            if (Physics.Raycast (ray, out hit, range, pickupLayerMask)) 
 			{
                 
                 print(hit.transform.gameObject.name);
@@ -36,6 +36,7 @@ public class ObjectClickerScript : MonoBehaviour {
             }
             if (Physics.Raycast(ray, out hit, range, projectileLayerMask))
             {
+                print("pickItUp");
                 print(hit.transform.gameObject.name);
                 GameObject.Find("FirstPersonCharacter").GetComponent<shooterScript>().bulletCount += 1;
                 uppickedObject = hit.collider.gameObject;

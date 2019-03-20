@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3516202049690660477}
   - component: {fileID: 3516202049690660473}
   m_Layer: 10
-  m_Name: Sphere
+  m_Name: pineCone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3c994c8ca15d2394b87d06043bf45417, type: 2}
+  - {fileID: 2100000, guid: f7d8d9e5cf5d9aa4ba9239dfbe599d47, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
