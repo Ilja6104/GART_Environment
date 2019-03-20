@@ -14,7 +14,7 @@ public class PlayerPickup : MonoBehaviour {
 			int layerMask = 1 << 8;
 			RaycastHit hitInfo;
 			if (Physics.Raycast (transform.position + transform.forward, transform.forward, out hitInfo, 3.0f, layerMask)) {
-				print (hitInfo.transform.gameObject.name);
+				//print (hitInfo.transform.gameObject.name);
 				uppickedObject = hitInfo.collider.gameObject;
 				uppickedObject.transform.parent = transform;
 			

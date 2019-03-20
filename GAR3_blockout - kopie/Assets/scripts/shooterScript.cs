@@ -17,7 +17,6 @@ public class shooterScript : MonoBehaviour {
         {
 			if(bulletCount > 0)
 			{
-				
 				print("shootyshoot");
 				bulletCount -= 1;
 				GameObject currentBullet = Instantiate(bulletPrefab, transform.position,Quaternion.identity);
@@ -26,7 +25,7 @@ public class shooterScript : MonoBehaviour {
 			}
 
         }
-        print(bulletCount);
+        //print(bulletCount);
     }
     
 }
