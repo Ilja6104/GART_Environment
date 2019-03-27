@@ -19,7 +19,7 @@ public class shooterScript : MonoBehaviour {
 			{
 				print("shootyshoot");
 				bulletCount -= 1;
-				GameObject currentBullet = Instantiate(bulletPrefab, transform.position,Quaternion.identity);
+				GameObject currentBullet = Instantiate(bulletPrefab, transform.position + transform.forward * 1, Quaternion.identity);
 				currentBullet.GetComponent<Rigidbody>().AddForce(transform.forward * 7f);
 				currentBullet.name = "Bullet";
 			}
