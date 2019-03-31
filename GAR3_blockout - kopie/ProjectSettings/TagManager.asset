@@ -6,6 +6,9 @@ TagManager:
   tags:
   - LadderStep
   - SidesStep
+  - Fire
+  - Hammer
+  - Ladder
   layers:
   - Default
   - TransparentFX

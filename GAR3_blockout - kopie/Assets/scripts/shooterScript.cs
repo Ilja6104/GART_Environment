@@ -7,9 +7,7 @@ public class shooterScript : MonoBehaviour {
     public GameObject bulletPrefab;
 	public int bulletCount = 10;
 	// Use this for initialization
-	void Start () {
-		
-	}
+	
 	
 	// Update is called once per frame
 	void Update () {
