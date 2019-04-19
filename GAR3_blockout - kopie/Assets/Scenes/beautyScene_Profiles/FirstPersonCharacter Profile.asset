@@ -18,6 +18,35 @@ MonoBehaviour:
   - {fileID: 114900849697240724}
   - {fileID: 114481687112669980}
   - {fileID: 114599459741016622}
+  - {fileID: 114338324158989414}
+--- !u!114 &114338324158989414
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
+  m_Name: Grain
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  colored:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 0.122
+  size:
+    overrideState: 1
+    value: 1
+  lumContrib:
+    overrideState: 1
+    value: 0.619
 --- !u!114 &114481687112669980
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -71,13 +100,13 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 1.15
+    value: 17
   tint:
     overrideState: 1
     value: 0
   colorFilter:
     overrideState: 1
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 0.9150943, g: 0.887947, b: 0.8417141, a: 1}
   hueShift:
     overrideState: 1
     value: 0
@@ -128,7 +157,7 @@ MonoBehaviour:
     value: {x: 1, y: 1, z: 1, w: 0.09646302}
   gain:
     overrideState: 1
-    value: {x: 1, y: 1, z: 1, w: 0.32154334}
+    value: {x: 1, y: 1, z: 1, w: 0.7100726}
   masterCurve:
     overrideState: 1
     value:
@@ -1421,10 +1450,10 @@ MonoBehaviour:
     value: 0
   radius:
     overrideState: 1
-    value: 0.08
+    value: 0.06
   quality:
     overrideState: 1
-    value: 3
+    value: 4
 --- !u!114 &114900849697240724
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1480,10 +1509,10 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 4
+    value: 3.27
   aperture:
     overrideState: 1
-    value: 6
+    value: 5.6
   focalLength:
     overrideState: 1
     value: 49

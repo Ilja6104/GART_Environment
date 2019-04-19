@@ -6,7 +6,7 @@ public class snapPositionHammer : MonoBehaviour
 {
 
     public GameObject staticHammer;
-    private Vector3 hammerPos = new Vector3(-38.106f, 3.975f,-33.657f);
+    private Vector3 hammerPos = new Vector3(-38.106f, 3.581f, -33.657f);
     private Quaternion hammerRot = Quaternion.Euler(new Vector3(0.0f, -36.236f, -90.00001f));
     private Rigidbody hammerRigidbody;
 

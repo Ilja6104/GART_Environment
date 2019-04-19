@@ -29,7 +29,6 @@ public class bucketLower : MonoBehaviour
                 entered = false;
             }
         }
-
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -38,12 +37,12 @@ public class bucketLower : MonoBehaviour
         if (other.gameObject.layer == 10)
         {
             other.gameObject.layer = 0;
-            if (hitAmount >= 3)
+            if (hitAmount >= 4)
             {
                 Debug.Log("loose");
                 //rigidbody.useGravity = true;
                 //rigidbody.constraints = RigidbodyConstraints.None;
-                lerpPosition = quad.transform.position + new Vector3(0, -5.2f, 0);
+                lerpPosition = quad.transform.position + new Vector3(0, -4.7f, 0);
                 fallspeed = 0.01f;
                 //entered = true;
 
