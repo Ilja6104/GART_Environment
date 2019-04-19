@@ -40,7 +40,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.122
+    value: 0.094
   size:
     overrideState: 1
     value: 1
@@ -118,7 +118,7 @@ MonoBehaviour:
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.44
+    value: 0.52
   contrast:
     overrideState: 1
     value: 0
