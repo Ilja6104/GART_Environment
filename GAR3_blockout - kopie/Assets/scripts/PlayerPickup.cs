@@ -14,13 +14,11 @@ public class PlayerPickup : MonoBehaviour {
 			int layerMask = 1 << 8;
 			RaycastHit hitInfo;
 			if (Physics.Raycast (transform.position + transform.forward, transform.forward, out hitInfo, 3.0f, layerMask)) {
-				//print (hitInfo.transform.gameObject.name);
 				uppickedObject = hitInfo.collider.gameObject;
 				uppickedObject.transform.parent = transform;
 			
 				uppickedRigidbody = uppickedObject.GetComponent<Rigidbody>();
 				uppickedRigidbody.isKinematic = true;
-
 			} 
 		}
 		else if (Input.GetMouseButtonUp(1))
@@ -29,7 +27,6 @@ public class PlayerPickup : MonoBehaviour {
 			uppickedObject.transform.parent = null;
 			uppickedObject = null;
 			uppickedRigidbody = null;
-
 		}
 
 	}
@@ -37,9 +34,5 @@ public class PlayerPickup : MonoBehaviour {
 	{ 
 		uppickedRigidbody.isKinematic = false; 
 	}
-
-
-
-
 }
 

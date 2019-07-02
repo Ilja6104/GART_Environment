@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class snapPositionLadder : MonoBehaviour
+public class SnapPositionLadder : MonoBehaviour
 {
-
-    public GameObject staticLadder;
+    
+    public GameObject StaticLadder;
     private Rigidbody ladderRigidbody;
     private Vector3 ladderPos = new Vector3(-55.24601f, 3.428934f, -37.59622f);
     private Quaternion ladderRot = Quaternion.Euler(new Vector3(-1.769f, 193.53f, -1.841f));
@@ -19,12 +19,12 @@ public class snapPositionLadder : MonoBehaviour
     private void OnCollisionStay(Collision other)
     {
         Debug.Log("collide");
-        staticLadder = GameObject.Find("ladder_standing(Clone)");
-        ladderRigidbody = staticLadder.GetComponent<Rigidbody>();
+        //StaticLadder = GameObject.Find("ladder_standing(Clone)");
+        ladderRigidbody = StaticLadder.GetComponent<Rigidbody>();
         if (other.gameObject.tag == "Ladder" && !ladderRigidbody.isKinematic == true)
         {
             Debug.Log("snap");
-            staticLadder.transform.SetPositionAndRotation(ladderPos, ladderRot);
+            StaticLadder.transform.SetPositionAndRotation(ladderPos, ladderRot);
             Destroy(ladderRigidbody);
         }
     }

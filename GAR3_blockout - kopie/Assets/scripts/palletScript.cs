@@ -1,23 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class palletScript : MonoBehaviour
+public class PalletScript : MonoBehaviour
 {
+    public static PalletScript Instance{get; private set;}
 
     public List<Collider> StepList = new List<Collider>();
     public List<Collider> SidesList = new List<Collider>();
+    public GameObject Ladder;
+    public bool HammerContact = false;
+
     int plankCount = 0;
     int sidesCount = 0;
-    public GameObject ladder;
-    public bool hammerContact = false;
-
+    
     private Vector3 ladderPos = new Vector3(-32.95f, -1.87f, -30.35f);
     private Quaternion ladderRot = Quaternion.Euler(new Vector3(-0.724f, 184.306f, -91.146f));
 
+
+    private void Start()
+    {
+        Instance = this;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-
-        //print(TriggerList);
         if (!StepList.Contains(other) && other.tag == "LadderStep")
         {
             plankCount = 0;
@@ -26,8 +32,6 @@ public class palletScript : MonoBehaviour
             {
                 plankCount += 1;
             }
-            //print("planks: " + plankCount);
-            //print("added" + other);
 
         }
         if (!SidesList.Contains(other) && other.tag == "SidesStep")
@@ -36,37 +40,40 @@ public class palletScript : MonoBehaviour
             SidesList.Add(other);
             foreach (var side in SidesList)
             {
-
                 sidesCount += 1;
             }
-            //print("sides: " + sidesCount);
-            //print("added" + other);
         }
 
-
     }
+
     void Update()
     {
-        if (plankCount >= 5 && sidesCount >= 2 && hammerContact == true)
+        List<GameObject> ObjectsToDestroy = new List<GameObject>();
+
+        if (plankCount >= 5 && sidesCount >= 2 && HammerContact == true)
         {
-            //Debug.Log("assemble");
             foreach (var plank in StepList)
             {
-                Destroy(plank.gameObject);
+                if (plank != null) ObjectsToDestroy.Add(plank.gameObject);
             }
             foreach (var side in SidesList)
             {
-                Destroy(side.gameObject);
+                if (side != null) ObjectsToDestroy.Add(side.gameObject);
             }
 
-            Instantiate(ladder, ladderPos, ladderRot);
+            Instantiate(Ladder, ladderPos, ladderRot);
+            plankCount = 0;
+            sidesCount = 0;
+        }
 
+        foreach (GameObject go in ObjectsToDestroy)
+        {
+            if(go != null) Destroy(go);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-
         if (StepList.Contains(other) && other.tag == "LadderStep")
         {
             plankCount = 0;
@@ -76,7 +83,6 @@ public class palletScript : MonoBehaviour
                 plankCount += 1;
             }
             print("planks: " + plankCount);
-            //print("removed" + other); 
         }
 
         if (!SidesList.Contains(other) && other.tag == "SidesStep")
@@ -85,11 +91,9 @@ public class palletScript : MonoBehaviour
             SidesList.Remove(other);
             foreach (var side in SidesList)
             {
-
                 sidesCount += 1;
             }
             print("sides: " + sidesCount);
-            //print("added" + other);
         }
     }
 }
