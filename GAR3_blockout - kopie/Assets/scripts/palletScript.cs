@@ -62,6 +62,7 @@ public class PalletScript : MonoBehaviour
             }
 
             Instantiate(Ladder, ladderPos, ladderRot);
+            FindObjectOfType<AudioManager>().Play("Build");
             plankCount = 0;
             sidesCount = 0;
         }

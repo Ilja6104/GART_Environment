@@ -148,6 +148,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_StepCycle += (m_CharacterController.velocity.magnitude + (speed*(m_IsWalking ? 1f : m_RunstepLenghten)))*
                              Time.fixedDeltaTime;
             }
+            
 
             if (!(m_StepCycle > m_NextStep))
             {
@@ -158,7 +159,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             PlayFootStepAudio();
         }
-
+        
 
         private void PlayFootStepAudio()
         {
