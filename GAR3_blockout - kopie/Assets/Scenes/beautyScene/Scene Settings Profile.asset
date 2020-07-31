@@ -17,6 +17,81 @@ MonoBehaviour:
   - {fileID: 114371762607113660}
   - {fileID: 114737159042292724}
   - {fileID: 114798170221128426}
+  - {fileID: 114150677633350428}
+--- !u!114 &114150677633350428
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29b00527f85bb3346a4d2cb710971587, type: 3}
+  m_Name: VolumetricFog
+  m_EditorClassIdentifier: 
+  active: 1
+  colorMode:
+    m_OverrideState: 1
+    m_Value: 1
+  color:
+    m_OverrideState: 1
+    m_Value: {r: 0.064613745, g: 0.09225846, b: 0.11320755, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  density:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  maxFogDistance:
+    m_OverrideState: 1
+    m_Value: 50000
+    min: 0
+  mipFogMaxMip:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+    max: 1
+  mipFogNear:
+    m_OverrideState: 1
+    m_Value: 0
+    min: 0
+  mipFogFar:
+    m_OverrideState: 1
+    m_Value: 1000
+    min: 0
+  albedo:
+    m_OverrideState: 1
+    m_Value: {r: 0.39560342, g: 0.60508895, b: 0.6603774, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  meanFreePath:
+    m_OverrideState: 1
+    m_Value: 14.14
+    min: 1
+  baseHeight:
+    m_OverrideState: 1
+    m_Value: -2.64
+  meanHeight:
+    m_OverrideState: 1
+    m_Value: 10
+    min: 1
+  anisotropy:
+    m_OverrideState: 1
+    m_Value: -1
+    min: -1
+    max: 1
+  globalLightProbeDimmer:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  enableDistantFog:
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &114371762607113660
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -136,28 +211,28 @@ MonoBehaviour:
     m_Value: 1
   sunSize:
     m_OverrideState: 1
-    m_Value: 0.04
+    m_Value: 0.039
     min: 0
     max: 1
   sunSizeConvergence:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 4.99
     min: 1
     max: 10
   atmosphereThickness:
     m_OverrideState: 1
-    m_Value: 0.65
+    m_Value: 1.03
     min: 0
     max: 5
   skyTint:
     m_OverrideState: 1
-    m_Value: {r: 0.03172837, g: 0.05750605, b: 0.21698111, a: 1}
+    m_Value: {r: 0.12936097, g: 0.18126166, b: 0.4811321, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
   groundColor:
     m_OverrideState: 1
-    m_Value: {r: 0.20754719, g: 0.18322232, b: 0.16153437, a: 1}
+    m_Value: {r: 0.05873977, g: 0.073524676, b: 0.2264151, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
@@ -179,10 +254,10 @@ MonoBehaviour:
   active: 1
   colorMode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0.11423106, g: 0.12348736, b: 0.16037738, a: 1}
+    m_Value: {r: 0.007843138, g: 0.020297205, b: 0.03137255, a: 1}
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
@@ -210,7 +285,7 @@ MonoBehaviour:
     min: 0
   fogDistance:
     m_OverrideState: 1
-    m_Value: 87.27
+    m_Value: 45
     min: 0
   fogBaseHeight:
     m_OverrideState: 1
